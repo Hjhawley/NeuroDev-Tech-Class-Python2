@@ -191,15 +191,15 @@ class ChessBoard:
                     self.board[row][col] = piece_obj
 
     def draw_board(self, screen):
-        """
-        Draw an 8x8 chessboard. Then draw each piece in self.board.
-        
-        1) Draw squares (two colors).
-        2) For each piece in the board, draw piece.surf onto the screen at the right position.
-        """
-
-        # They should draw squares in a loop, then piece images if they exist.
-        pass
+        tile_size = screen.get_width() // 8
+        colors = [(240, 217, 181), (181, 136, 99)]
+        for row in range(8):
+            for col in range(8):
+                color = colors[(row + col) % 2]
+                pygame.draw.rect(screen, color, (col * tile_size, row * tile_size, tile_size, tile_size))
+                piece = self.board[row][col]
+                if piece:
+                    screen.blit(piece.surf, (col * tile_size, row * tile_size))
 
     def handle_click(self, row, col):
         """
@@ -255,9 +255,9 @@ def main():
     pygame.init()
     
     # 2) Create a screen 
-    #    Example: 800x800 for 8x8 squares of 100 px each
-    screen_width = 800
-    screen_height = 800
+    #    Example: 512x512 for 8x8 squares of 64 px each
+    screen_width = 512
+    screen_height = 512
     screen = pygame.display.set_mode((screen_width, screen_height))
     pygame.display.set_caption("Chess Game")
     

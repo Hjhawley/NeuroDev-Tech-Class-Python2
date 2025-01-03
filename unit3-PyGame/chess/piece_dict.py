@@ -1,19 +1,19 @@
 piece_icons = {
     "black": {
-        "queen": "piece_pics/black_queen.png",
-        "pawn": "piece_pics/black_pawn.png",
-        "rook": "piece_pics/black_rook.png",
-        "king": "piece_pics/black_king.png",
-        "bishop": "piece_pics/black_bishop.png",
-        "knight": "piece_pics/black_knight.png",
+        "queen": "assets/black_queen.png",
+        "pawn": "assets/black_pawn.png",
+        "rook": "assets/black_rook.png",
+        "king": "assets/black_king.png",
+        "bishop": "assets/black_bishop.png",
+        "knight": "assets/black_knight.png",
     },
     "white": {
-        "queen": "piece_pics/white_queen.png",
-        "pawn": "piece_pics/white_pawn.png",
-        "rook": "piece_pics/white_rook.png",
-        "king": "piece_pics/white_king.png",
-        "bishop": "piece_pics/white_bishop.png",
-        "knight": "piece_pics/white_knight.png",
+        "queen": "assets/white_queen.png",
+        "pawn": "assets/white_pawn.png",
+        "rook": "assets/white_rook.png",
+        "king": "assets/white_king.png",
+        "bishop": "assets/white_bishop.png",
+        "knight": "assets/white_knight.png",
     }
 }
 
