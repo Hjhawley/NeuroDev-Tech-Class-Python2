@@ -79,7 +79,7 @@ class Piece(pygame.sprite.Sprite):
     def create_surface(self):
         surf = pygame.image.load(piece_icons[self.color][self.piece_type]).convert()
         surf = pygame.transform.scale(surf, (self.height, self.width))
-        surf.set_colorkey((255, 255, 255), RLEACCEL)
+        surf.set_colorkey((0, 255, 0), RLEACCEL)
 
         return surf
     
@@ -436,9 +436,9 @@ class Board():
 
     def draw_tile(self, cell_size: int, screen: Surface, row: int, col: int):
         if row % 2 == col % 2:
-            pygame.draw.rect(self.screen, (255,255,255), (col*cell_size, row*cell_size, cell_size, cell_size))
+            pygame.draw.rect(self.screen, (242,225,195), (col*cell_size, row*cell_size, cell_size, cell_size))
         else:
-            pygame.draw.rect(self.screen, (0,0,0), (col*cell_size, row*cell_size, cell_size, cell_size))
+            pygame.draw.rect(self.screen, (195,160,130), (col*cell_size, row*cell_size, cell_size, cell_size))
 
     def draw_board(self, cell_size: int):
         """Draws alternating color chessboard with each tile being dims: cell_size by cell_size"""
